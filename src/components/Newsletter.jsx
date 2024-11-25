@@ -1,6 +1,23 @@
-function Newsletter() {
+import { postSub } from "@/lib/supabase";
+import { revalidatePath } from "next/cache";
+
+async function Newsletter() {
+  async function sendData(formData) {
+    "use server";
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+    };
+    await postSub(data);
+
+    revalidatePath("/");
+  }
+
   return (
-    <form className="max-w-md mx-auto p-4 bg-white shadow-md rounded">
+    <form
+      action={sendData}
+      className="max-w-md mx-auto p-4 bg-white shadow-md rounded"
+    >
       <div className="mb-4">
         <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
           Name
