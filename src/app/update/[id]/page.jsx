@@ -1,4 +1,7 @@
+
 async function page({params}) {
+
+
     /*TODO:
     - Hent subscriber med id fra params
     - Lav en formular med input for name og email med "defaultValue" sat til subscriberens nuværende værdier
@@ -11,7 +14,7 @@ async function page({params}) {
     */ 
 
     // const { id } = await params;
-    // const subscriber = await getSubById(id);
+   // const subscriber = await getSubById(id);
 
   return (
     <form action={}>
