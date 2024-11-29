@@ -6,7 +6,7 @@ import { revalidatePath } from "next/cache";
 export default async function Home() {
   async function deleteSub(id) {
     await deleteSub(id);
-    revalidatePath("/");
+    // revalidatePath("/");
   }
   const subscribers = await getSubs();
   return (
