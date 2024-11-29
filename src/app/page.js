@@ -18,7 +18,8 @@ export default async function Home() {
           {subscribers.map((sub) => (
             <li className="m-1 bg-gray-200 rounded-sm p-2" key={sub.id}>
               {sub.name} - {sub.email}
-              <form action={deleteSub.bind(null, sub.id)}>
+              {/* action={deleteSub.bind(null, sub.id)} */}
+              <form>
                 <button className="p-1 bg-red-200 ml-2 rounded-sm">Delete</button>
               </form>
             </li>
