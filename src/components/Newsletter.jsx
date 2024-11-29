@@ -1,13 +1,13 @@
 "use client";
 import sendData from "@/app/actions";
 import SubmitButton from "@/components/SubmitButton.jsx";
-// import { useActionState } from "react-dom";
+import { useActionState } from "react-dom";
 
 async function Newsletter() {
-  // const [state, formAction] = useActionState(sendData);
-  // action={formAction} <-- i form
+  const [state, formAction] = useActionState(sendData);
+
   return (
-    <form className="max-w-md mx-auto p-4 bg-white shadow-md rounded">
+    <form action={formAction} className="max-w-md mx-auto p-4 bg-white shadow-md rounded">
       <div className="mb-4">
         <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
           Name
