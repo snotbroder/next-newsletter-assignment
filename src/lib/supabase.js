@@ -5,7 +5,7 @@ const headersList = {
   Accept: "application/json",
   "Content-Type": "application/json",
   apikey: key,
-  Prefer: "return=representation",
+  prefer: "return=representation",
 };
 
 export async function getSubs() {
