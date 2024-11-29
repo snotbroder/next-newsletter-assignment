@@ -9,9 +9,9 @@ const headersList = {
 };
 
 export async function getSubs() {
-  const response = await fetch(url, {
-    method: "GET",
-    headers: { Accept: "application/json", "Content-Type": "application/json", apikey: key, prefer: "return=representation" },
+  const response = await fetch("https://yvryewmqhortlntohllc.supabase.co/rest/v1/subscriptions", {
+    // method: "GET",
+    headers: headersList,
   });
 
   const data = await response.json();
@@ -39,13 +39,13 @@ export async function getSubs() {
 //   return data;
 // }
 
-export async function deleteSub(id) {
-  const response = await fetch(url, {
-    method: "DELETE",
-    headers: headersList,
-    body: JSON.stringify(id),
-  });
+// export async function deleteSub(id) {
+//   const response = await fetch(url, {
+//     method: "DELETE",
+//     headers: headersList,
+//     body: JSON.stringify(id),
+//   });
 
-  const data = await response.json();
-  return data;
-}
+//   const data = await response.json();
+//   return data;
+// }
