@@ -1,6 +1,10 @@
 
 async function page({params}) {
-
+ const { id } = await params;
+ const subscriber = await getSubById(id);
+async function updateAction(params) {
+  
+}
 
     /*TODO:
     - Hent subscriber med id fra params
@@ -13,8 +17,7 @@ async function page({params}) {
     - Brug redirect("/") til at sende brugeren tilbage til forsiden
     */ 
 
-    // const { id } = await params;
-   // const subscriber = await getSubById(id);
+
 
   return (
     <form action={}>
