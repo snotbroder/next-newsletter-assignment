@@ -11,7 +11,7 @@ const headersList = {
 export async function getSubs() {
   const response = await fetch(url, {
     method: "GET",
-    headers: headersList,
+    headers: { Accept: "application/json", "Content-Type": "application/json", apikey: key, prefer: "return=representation" },
   });
 
   const data = await response.json();
@@ -28,24 +28,24 @@ export async function getSubs() {
 //   return data;
 // }
 
-export async function postSub(subdata) {
-  const response = await fetch(url, {
-    method: "POST",
-    headers: headersList,
-    body: JSON.stringify(subdata),
-  });
+// export async function postSub(subdata) {
+//   const response = await fetch(url, {
+//     method: "POST",
+//     headers: headersList,
+//     body: JSON.stringify(subdata),
+//   });
 
-  const data = await response.json();
-  return data;
-}
+//   const data = await response.json();
+//   return data;
+// }
 
-export async function deleteSub(id) {
-  const response = await fetch(url, {
-    method: "DELETE",
-    headers: headersList,
-    body: JSON.stringify(id),
-  });
+// export async function deleteSub(id) {
+//   const response = await fetch(url, {
+//     method: "DELETE",
+//     headers: headersList,
+//     body: JSON.stringify(id),
+//   });
 
-  const data = await response.json();
-  return data;
-}
+//   const data = await response.json();
+//   return data;
+// }
